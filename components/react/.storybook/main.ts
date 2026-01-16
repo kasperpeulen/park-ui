@@ -1,25 +1,27 @@
-import { dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import type { StorybookConfig } from '@storybook/react-vite'
+import type { StorybookConfig } from '@storybook/react-vite';
 
-const config: StorybookConfig = {
-  framework: getAbsolutePath('@storybook/react-vite'),
-  stories: ['../src/**/*.stories.tsx'],
-  addons: [
-    getAbsolutePath('@storybook/addon-a11y'),
-    getAbsolutePath('@storybook/addon-themes'),
-    getAbsolutePath('@storybook/addon-vitest'),
-  ],
-  core: {
-    disableTelemetry: true,
-  },
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-  },
-}
+import { dirname } from "path"
 
-export default config
+import { fileURLToPath } from "url"
 
-function getAbsolutePath(value: string): any {
+/**
+* This function is used to resolve the absolute path of a package.
+* It is needed in projects that use Yarn PnP or are set up within a monorepo.
+*/
+function getAbsolutePath(value: string) {
   return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)))
 }
+const config: StorybookConfig = {
+  "stories": [
+    "../src/**/*.mdx",
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+  ],
+  "addons": [
+    getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('@storybook/addon-vitest'),
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('@storybook/addon-docs')
+  ],
+  "framework": getAbsolutePath('@storybook/react-vite')
+};
+export default config;
