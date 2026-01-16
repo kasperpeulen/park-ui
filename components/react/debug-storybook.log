@@ -1,0 +1,380 @@
+[11:34:29.670] [INFO] Storybook upgrade - v10.2.0-beta.0
+[11:34:29.672] [INFO] Detecting projects...
+[11:34:29.672] [DEBUG] Finding Storybook projects...
+[11:34:29.696] [DEBUG] Found 1 Storybook projects
+[11:34:29.697] [INFO] Detecting projects: 1 projects
+[11:34:29.697] [DEBUG] Getting Storybook data...
+[11:34:29.697] [DEBUG] Getting Storybook info...
+[11:34:29.791] [DEBUG] Loading main config...
+[11:34:29.791] [DEBUG] Getting stories paths...
+[11:34:29.804] [DEBUG] Getting package manager...
+[11:34:30.046] [DEBUG] Getting package.json info for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:30.046] [DEBUG] Getting Storybook version...
+[11:34:30.046] [DEBUG] Detecting CSF factory usage...
+[11:34:30.058] [DEBUG] /components/react/.storybook - Validating before version... 10.1.8
+[11:34:30.058] [DEBUG] /components/react/.storybook - Validating upgrade compatibility...
+[11:34:30.058] [DEBUG] /components/react/.storybook - Fetching NPM version information...
+[11:34:30.058] [DEBUG] Getting CLI versions from NPM for storybook...
+[11:34:30.058] [DEBUG] Executing command: npm info storybook version
+[11:34:30.062] [DEBUG] Getting CLI versions from NPM for storybook@next...
+[11:34:30.062] [DEBUG] Executing command: npm info storybook@next version
+[11:34:30.507] [DEBUG] /components/react/.storybook - Evaluating blockers...
+[11:34:30.515] [DEBUG] Getting installed version for @storybook/experimental-addon-test...
+[11:34:30.516] [DEBUG] Executing command: npm ls --json --depth=99
+[11:34:31.062] [DEBUG] Executing command: npm ls --json --depth=0
+[11:34:31.575] [DEBUG] An issue occurred while trying to find dependencies metadata using npm: ExecaError: Command failed with exit code 1: npm ls --json '--depth=0'
+
+{
+  "name": "root",
+  "problems": [
+    "invalid: @park-ui/preset@1.0.0 /Users/kasperpeulen/repos/park-ui-qa-test/node_modules/@park-ui/preset",
+    "invalid: @park-ui/scripts@ /Users/kasperpeulen/repos/park-ui-qa-test/node_modules/@park-ui/scripts"
+  ],
+  "dependencies": {
+    "@park-ui/react": {
+      "resolved": "file:../../components/react",
+      "overridden": false,
+      "dependencies": {
+        "@ark-ui/react": {
+          "version": "5.30.0",
+          "overridden": false
+        },
+        "@pandacss/dev": {
+          "version": "1.7.0",
+          "overridden": false
+        },
+        "@pandacss/preset-base": {
+          "version": "1.7.0",
+          "overridden": false
+        },
+        "@pandacss/preset-panda": {
+          "version": "1.7.0",
+          "overridden": false
+        },
+        "@park-ui/preset": {
+          "version": "1.0.0",
+          "resolved": "file:../../packages/preset",
+          "overridden": false,
+          "invalid": "\"workspace:*\" from components/react",
+          "problems": [
+            "invalid: @park-ui/preset@1.0.0 /Users/kasperpeulen/repos/park-ui-qa-test/node_modules/@park-ui/preset"
+          ],
+          "dependencies": {
+            "@ark-ui/react": {
+              "version": "5.30.0"
+            },
+            "@pandacss/dev": {
+              "version": "1.7.0"
+            },
+            "@park-ui/scripts": {
+              "invalid": "\"workspace:*\" from components/react, \"workspace:*\" from packages/preset",
+              "problems": [
+                "invalid: @park-ui/scripts@ /Users/kasperpeulen/repos/park-ui-qa-test/node_modules/@park-ui/scripts"
+              ]
+            },
+            "@radix-ui/colors": {
+              "version": "3.0.0",
+              "overridden": false
+            },
+            "typescript": {
+              "version": "5.9.3"
+            }
+          }
+        },
+        "@park-ui/scripts": {
+          "resolved": "file:../../packages/scripts",
+          "overridden": false,
+          "invalid": "\"workspace:*\" from components/react, \"workspace:*\" from packages/preset",
+          "problems": [
+            "invalid: @park-ui/scripts@ /Users/kasperpeulen/repos/park-ui-qa-test/node_modules/@park-ui/scripts"
+          ],
+          "dependencies": {
+            "@clack/prompts": {
+              "version": "0.11.0",
+              "overridden": false
+            },
+            "@types/fs-extra": {
+              "version": "11.0.4",
+              "overridden": false
+            },
+            "commander": {
+              "version": "14.0.2",
+              "overridden": false
+            },
+            "effect": {
+              "version": "3.19.12",
+              "overridden": false
+            },
+            "fast-glob": {
+              "version": "3.3.3",
+              "overridden": false
+            },
+            "fs-extra": {
+              "version": "11.3.2",
+              "overridden": false
+            },
+            "picocolors": {
+              "version": "1.1.1",
+              "overridden": false
+            },
+            "ts-morph": {
+              "version": "27.0.2",
+              "overridden": false
+            },
+            "typescript": {
+              "version": "5.9.3"
+            },
+            "zod": {
+              "version": "4.1.13",
+              "overridden": false
+            }
+          }
+        },
+        "@storybook/addon-a11y": {
+          "version": "10.1.8",
+          "overridden": false
+        },
+        "@storybook/addon-themes": {
+          "version": "10.1.8",
+          "overridden": false
+        },
+        "@storybook/react-vite": {
+          "version": "10.1.8",
+          "overridden": false
+        },
+        "@storybook/react": {
+          "version": "10.1.8",
+          "overridden": false
+        },
+        "@tanstack/react-virtual": {
+          "version": "3.13.13",
+          "overridden": false
+        },
+        "@types/react-dom": {
+          "version": "19.2.3",
+          "overridden": false
+        },
+        "@types/react": {
+          "version": "19.2.7",
+          "overridden": false
+        },
+        "@vitejs/plugin-react": {
+          "version": "5.1.2",
+          "overridden": false
+        },
+        "lorem-ipsum": {
+          "version": "2.0.8",
+          "overridden": false
+        },
+        "lucide-react": {
+          "version": "0.561.0",
+          "overridden": false
+        },
+        "react-dom": {
+          "version": "19.2.3",
+          "overridden": false
+        },
+        "react": {
+          "version": "19.2.3",
+          "overridden": false
+        },
+        "storybook": {
+          "version": "10.1.8",
+          "overridden": false
+        },
+        "typescript": {
+          "version": "5.9.3",
+          "overridden": false
+        },
+        "vite-tsconfig-paths": {
+          "version": "5.1.4",
+          "overridden": false
+        },
+        "vite": {
+          "version": "7.2.7",
+          "overridden": false
+        }
+      }
+    }
+  },
+  "error": {
+    "code": "ELSPROBLEMS",
+    "summary": "invalid: @park-ui/preset@1.0.0 /Users/kasperpeulen/repos/park-ui-qa-test/node_modules/@park-ui/preset\ninvalid: @park-ui/scripts@ /Users/kasperpeulen/repos/park-ui-qa-test/node_modules/@park-ui/scripts",
+    "detail": ""
+  }
+}
+[11:34:31.575] [DEBUG] No installations found for @storybook/experimental-addon-test
+[11:34:31.575] [INFO] 1 project detected
+[11:34:31.575] [DEBUG] Found 1 valid projects and 0 error projects
+[11:34:31.575] [INFO] Upgrading from 10.1.8 to 10.2.0-beta.0
+[11:34:31.576] [DEBUG] Updating dependencies in /components/react/.storybook...
+[11:34:31.576] [INFO] /components/react/package.json
+/package.json
+[11:34:31.576] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:31.576] [DEBUG] {
+  "upgradedDependencies": []
+}
+[11:34:31.576] [DEBUG] {
+  "upgradedDevDependencies": [
+    "@storybook/addon-a11y@10.2.0-beta.0",
+    "@storybook/addon-themes@10.2.0-beta.0",
+    "@storybook/react@10.2.0-beta.0",
+    "@storybook/react-vite@10.2.0-beta.0",
+    "storybook@10.2.0-beta.0"
+  ]
+}
+[11:34:31.576] [DEBUG] {
+  "upgradedPeerDependencies": []
+}
+[11:34:31.576] [DEBUG] Getting package.json info for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:31.576] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:31.576] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:31.577] [DEBUG] Getting package.json info for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:31.577] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:31.577] [DEBUG] Getting CLI versions from NPM for @storybook/addon-a11y...
+[11:34:31.577] [DEBUG] Executing command: npm info @storybook/addon-a11y version
+[11:34:31.932] [DEBUG] Getting CLI versions from NPM for @storybook/addon-themes...
+[11:34:31.932] [DEBUG] Executing command: npm info @storybook/addon-themes version
+[11:34:32.332] [DEBUG] Getting CLI versions from NPM for @storybook/react...
+[11:34:32.332] [DEBUG] Executing command: npm info @storybook/react version
+[11:34:32.701] [DEBUG] Getting CLI versions from NPM for @storybook/react-vite...
+[11:34:32.701] [DEBUG] Executing command: npm info @storybook/react-vite version
+[11:34:33.040] [DEBUG] Using cached version for storybook...
+[11:34:33.040] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.041] [DEBUG] Getting package.json info for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.041] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.041] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.041] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.041] [DEBUG] {
+  "upgradedDependencies": []
+}
+[11:34:33.041] [DEBUG] {
+  "upgradedDevDependencies": []
+}
+[11:34:33.041] [DEBUG] {
+  "upgradedPeerDependencies": []
+}
+[11:34:33.041] [DEBUG] Getting package.json info for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.041] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.041] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.041] [DEBUG] Getting package.json info for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.041] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.041] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.041] [DEBUG] Getting package.json info for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.041] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.041] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.041] [INFO] Updated package versions in package.json files
+[11:34:33.042] [DEBUG] Starting automigration collection across 1 projects and 19 fixes...
+[11:34:33.042] [INFO] Checking automigrations for /components/react/.storybook...
+[11:34:33.042] [DEBUG] Processing project: /components/react/.storybook
+[11:34:33.042] [DEBUG] Checking fix eslintPlugin for project /components/react/.storybook...
+[11:34:33.042] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.042] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.042] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.042] [DEBUG] Checking fix addon-mdx-gfm-remove for project /components/react/.storybook...
+[11:34:33.042] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.042] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.042] [DEBUG] Checking fix addon-storysource-code-panel for project /components/react/.storybook...
+[11:34:33.043] [DEBUG] Checking fix upgrade-storybook-related-dependencies for project /components/react/.storybook...
+[11:34:33.043] [DEBUG] Checking for incompatible storybook packages...
+[11:34:33.043] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.043] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.043] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.043] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.043] [DEBUG] Checking fix initial-globals for project /components/react/.storybook...
+[11:34:33.045] [DEBUG] Checking fix addon-globals-api for project /components/react/.storybook...
+[11:34:33.047] [DEBUG] Checking fix addon-a11y-addon-test for project /components/react/.storybook...
+[11:34:33.047] [DEBUG] Checking fix consolidated-imports for project /components/react/.storybook...
+[11:34:33.047] [DEBUG] Checking fix addon-experimental-test for project /components/react/.storybook...
+[11:34:33.047] [DEBUG] Using cached installed version for @storybook/experimental-addon-test...
+[11:34:33.047] [DEBUG] Checking fix rnstorybook-config for project /components/react/.storybook...
+[11:34:33.047] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.047] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.047] [DEBUG] Checking fix migrate-addon-console for project /components/react/.storybook...
+[11:34:33.048] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.048] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.048] [DEBUG] Checking fix nextjs-to-nextjs-vite for project /components/react/.storybook...
+[11:34:33.048] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.048] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.048] [DEBUG] Checking fix remove-addon-interactions for project /components/react/.storybook...
+[11:34:33.048] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.048] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.048] [DEBUG] Checking fix renderer-to-framework for project /components/react/.storybook...
+[11:34:33.048] [DEBUG] Checking fix remove-essential-addons for project /components/react/.storybook...
+[11:34:33.048] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/components/react/package.json...
+[11:34:33.048] [DEBUG] Using cached package.json for /Users/kasperpeulen/repos/park-ui-qa-test/package.json...
+[11:34:33.048] [DEBUG] Checking fix addon-a11y-parameters for project /components/react/.storybook...
+[11:34:33.049] [DEBUG] Checking fix remove-docs-autodocs for project /components/react/.storybook...
+[11:34:33.050] [DEBUG] Checking fix wrap-getAbsolutePath for project /components/react/.storybook...
+[11:34:33.052] [DEBUG] Checking fix fix-faux-esm-require for project /components/react/.storybook...
+[11:34:33.053] [INFO] 
+Automigrations detected:
+[11:34:33.053] [INFO] ✔ renderer-to-framework
+[11:34:33.054] [INFO] ✔ wrap-getAbsolutePath
+[11:34:33.054] [INFO] 2 automigration(s) detected
+[11:34:33.054] [INFO] Running all detected automigrations:
+[11:34:33.054] [INFO]   - renderer-to-framework (/components/react/.storybook)
+[11:34:33.054] [INFO]   - wrap-getAbsolutePath (/components/react/.storybook)
+[11:34:33.055] [DEBUG] 
+Migrating @storybook/react to @storybook/react-vite
+[11:34:33.061] [DEBUG] Updating package.json files...
+[11:34:33.062] [INFO] ✔ renderer-to-framework
+[11:34:33.070] [INFO] ✔ wrap-getAbsolutePath
+[11:34:33.070] [INFO] Completed automigrations for /components/react/.storybook
+[11:34:33.070] [INFO] Installing dependencies...
+[11:34:33.070] [INFO] Installing dependencies...
+[11:34:33.070] [DEBUG] Executing command: bun install
+[11:34:33.078] [INFO] Installing dependencies...: bun install v1.3.5 (1e86cebd)
+
+[11:34:33.078] [INFO] Installing dependencies...: bun install v1.3.5 (1e86c
+[11:34:34.020] [INFO] Installing dependencies...: sync hooks: ✔️ (pre-commit)
+
+[11:34:34.020] [INFO] Installing dependencies...: sync hooks: ✔️ (pre-commi
+[11:34:35.109] [INFO] Installing dependencies...: @park-ui/vue prepare: Exited with code 0
+
+[11:34:35.109] [INFO] Installing dependencies...: @park-ui/vue prepare: Exi
+[11:34:35.352] [INFO] Installing dependencies...: @park-ui/solid prepare: Exited with code 0
+
+[11:34:35.352] [INFO] Installing dependencies...: @park-ui/solid prepare: E
+[11:34:35.370] [INFO] Installing dependencies...: @park-ui/react prepare: Exited with code 0
+
+[11:34:35.370] [INFO] Installing dependencies...: @park-ui/react prepare: E
+[11:34:35.427] [INFO] Installing dependencies...: @park-ui/website prepare: Exited with code 0
+
+[11:34:35.427] [INFO] Installing dependencies...: @park-ui/website prepare:
+[11:34:35.427] [INFO] Installing dependencies...: 
++ @storybook/addon-a11y@10.2.0-beta.0
++ @storybook/addon-themes@10.2.0-beta.0
++ @storybook/react-vite@10.2.0-beta.0
++ storybook@10.2.0-beta.0
+
+12 packages installed [2.35s]
+
+[11:34:35.427] [INFO] Installing dependencies...: + @storybook/addon-a11y@1
+[11:34:35.432] [INFO] Dependencies installed
+[11:34:35.432] [INFO] Dependencies installed
+[11:34:35.433] [WARN] Since you are in a monorepo, we advise you to deduplicate your dependencies. We can do this for you but it might take some time.
+[11:34:35.435] [INFO] Deduplicating dependencies...
+[11:34:35.435] [INFO] Deduplicating dependencies...
+[11:34:35.435] [DEBUG] Executing command: bun dedupe
+[11:34:35.447] [ERROR] An error occurred while deduplicating dependencies. {"error":"ExecaError: Command failed with exit code 1: bun dedupe\n\nerror: Script not found \"dedupe\"\n    at getFinalError (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-IZ3ATSWZ.js:13107:10)\n    at makeError (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-IZ3ATSWZ.js:14643:15)\n    at getAsyncResult (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-IZ3ATSWZ.js:17289:158)\n    at handlePromise (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-IZ3ATSWZ.js:17275:162)\n    at async Object.executeTask (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-72K4WVI5.js:3650:11)\n    at async BUNProxy.dedupeDependencies (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-IZ3ATSWZ.js:11264:5)\n    at async upgrade (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/@storybook/cli/dist/_node-chunks/run-WSXXXA6W.js:9455:107)\n    at async file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/@storybook/cli/dist/_node-chunks/run-WSXXXA6W.js:9585:70\n    at async withTelemetry (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-UH2GWMFP.js:218:12)\n    at async Command.<anonymous> (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/@storybook/cli/dist/_node-chunks/run-WSXXXA6W.js:9581:3)"}
+[11:34:35.447] [INFO] Command failed with exit code 1: bun dedupe
+
+error: Script not found "dedupe"
+[11:34:35.447] [ERROR] [38;2;241;97;97mExecaError: Command failed with exit code 1: bun dedupe
+
+error: Script not found "dedupe"[39m
+    at getFinalError (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-IZ3ATSWZ.js:13107:10)
+    at makeError (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-IZ3ATSWZ.js:14643:15)
+    at getAsyncResult (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-IZ3ATSWZ.js:17289:158)
+    at handlePromise (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-IZ3ATSWZ.js:17275:162)
+    at async Object.executeTask (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-72K4WVI5.js:3650:11)
+    at async BUNProxy.dedupeDependencies (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-IZ3ATSWZ.js:11264:5)
+    at async upgrade (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/@storybook/cli/dist/_node-chunks/run-WSXXXA6W.js:9455:107)
+    at async file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/@storybook/cli/dist/_node-chunks/run-WSXXXA6W.js:9585:70
+    at async withTelemetry (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/storybook/dist/_node-chunks/chunk-UH2GWMFP.js:218:12)
+    at async Command.<anonymous> (file:///Users/kasperpeulen/.npm/_npx/3a52fa6fe5410433/node_modules/@storybook/cli/dist/_node-chunks/run-WSXXXA6W.js:9581:3)
+[11:34:35.450] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry
+[11:34:35.810] [ERROR] ExecaError: Command failed with exit code 1: bun dedupe
+
+error: Script not found "dedupe"

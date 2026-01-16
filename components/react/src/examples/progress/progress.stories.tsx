@@ -1,4 +1,4 @@
-import type { Meta } from '@storybook/react'
+import type { Meta } from '@storybook/react-vite'
 import { Box } from 'styled-system/jsx'
 
 const meta: Meta = {
