@@ -30,6 +30,7 @@ export interface LoaderProps extends HTMLStyledProps<'span'> {
 const Span = styled('span')
 
 export const Loader = forwardRef<HTMLSpanElement, LoaderProps>(function Loader(props, ref) {
+  console.log('Loader props:', props)
   const {
     spinner = <Spinner size="inherit" borderWidth="0.125em" color="inherit" />,
     spinnerPlacement = 'start',
