@@ -9,7 +9,7 @@ export interface LoaderProps extends HTMLStyledProps<'span'> {
    * Whether the loader is visible
    * @default true
    */
-  visible?: boolean | undefined
+  visible: boolean
   /**
    * The spinner to display when loading
    */
